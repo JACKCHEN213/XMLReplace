@@ -1,0 +1,20 @@
+{
+    "name": "jack/xml-replace",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chenchao",
+            "email": "1366294101@qq.com"
+        }
+    ],
+    "require": {
+        "sabre/xml": "^4.0"
+    },
+    "suggest": {
+        "php": "^7.4"
+    }
+}

@@ -2,7 +2,8 @@
     "name": "jack/xml-replace",
     "autoload": {
         "psr-4": {
-            "src\\": "src/"
+            "src\\": "src/",
+            "tools\\": "tools/"
         }
     },
     "authors": [
@@ -16,5 +17,8 @@
     },
     "suggest": {
         "php": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }

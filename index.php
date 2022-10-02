@@ -5,4 +5,4 @@ require_once "common.php";
 
 use src\Replace;
 
-var_dump((new Replace())->run());
+(new Replace())->run();

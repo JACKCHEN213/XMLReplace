@@ -26,9 +26,10 @@ class Md5File
     private static function getCompareFiles($template_files, $source_files): array
     {
         $compare = [
-            'not_exists' => [],
-            'change' => [],
-            'surplus' => [],
+            'no_change' => [], // 没有改变的文件
+            'change' => [], // 改变了的文件
+            'not_exists' => [], // 目前目录不存在的源文件
+            'surplus' => [], // 目标目录多余的文件
         ];
         foreach ($template_files as $file => $code) {
             if (!isset($source_files[$file])) {
@@ -36,6 +37,8 @@ class Md5File
             } else {
                 if ($code != $source_files[$file]) {
                     $compare['change'][] = $file;
+                } else {
+                    $compare['no_change'][] = $file;
                 }
             }
         }

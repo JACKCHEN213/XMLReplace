@@ -2,11 +2,25 @@
 
 namespace tools;
 
+use Exception;
+use Sabre\Xml\Reader;
 use Sabre\Xml\Service;
 
 class XML
 {
-    public static function read($file): array
+    private static ?Service $service = null;
+
+    private static function getService(): Service
+    {
+        if (!self::$service) {
+            self::$service = new Service();
+        }
+        return self::$service;
+    }
+    /**
+     * @throws Exception
+     */
+    public static function read($file)
     {
         if (is_file($file)) {
             $file = file_get_contents($file);
@@ -27,5 +41,10 @@ class XML
             ];
         }
         return $result;
+    }
+
+    public static function write($content)
+    {
+        return self::getService()->write('Table', $content);
     }
 }

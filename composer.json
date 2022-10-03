@@ -1,24 +1,25 @@
 {
-    "name": "jack/xml-replace",
-    "autoload": {
-        "psr-4": {
-            "src\\": "src/",
-            "tools\\": "tools/"
-        }
-    },
-    "authors": [
-        {
-            "name": "chenchao",
-            "email": "1366294101@qq.com"
-        }
-    ],
-    "require": {
-        "sabre/xml": "^4.0"
-    },
-    "suggest": {
-        "php": "^7.4"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.5"
+  "name": "jack/xml-replace",
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/",
+      "tools\\": "tools/"
     }
+  },
+  "authors": [
+    {
+      "name": "chenchao",
+      "email": "1366294101@qq.com"
+    }
+  ],
+  "require": {
+    "sabre/xml": "^4.0",
+    "ext-json": "*"
+  },
+  "suggest": {
+    "php": "^7.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
 }
